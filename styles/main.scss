@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  background: #ffffff;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+img {
+  vertical-align: middle; // Remove gap from bottom of images.
+  border: 0; // Remove blue line border.
+  -ms-interpolation-mode: bicubic; // Image smoothing for IE 7.
+  image-rendering: optimizeQuality; // For Firefox 3.6 and above;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    color: rgb(61, 59, 59);
+  }
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 2.625rem 1.5rem;
+}
+.wp-caption {
+  /* Force the box to be 100% */
+  width: 100% !important;
+}
+
+#content .wp-caption a img {
+  /* Scale down if too big */
+  max-width: 99.03225806%; /* 614/620 */
+  height: auto;
+}
+
+.loadmore-button {
+  background: #fefefe;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  display: block;
+  margin: auto;
+  &:hover {
+    background: #000;
+    color: #fefefe;
+  }
+}
+
+.home-link {
+  height: 60px;
+  width: 60px;
+  background: #000;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease-in-out;
+  a {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+}

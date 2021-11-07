@@ -1,0 +1,73 @@
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+.blogcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 40px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  @include breakpoint(min-width 768px) {
+    flex-direction: row;
+    padding-bottom: 40px;
+  }
+  .image {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    @include breakpoint(min-width 768px) {
+      height: 300px;
+      width: 500px;
+    }
+  }
+  .content {
+    padding: 10px 0;
+    @include breakpoint(min-width 768px) {
+      flex-basis: calc(100% - 550px);
+      margin-left: 50px;
+    }
+  }
+  .author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    &-image {
+      position: relative;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 20px;
+    }
+    &-name {
+      margin-left: 5px;
+    }
+  }
+  .title {
+    color: #ff163c;
+    margin: 20px 0;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .categories {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    li {
+      color: #ff163c;
+      &:not(:last-child) {
+        margin-right: 15px;
+        position: relative;
+        &:after {
+          content: "/";
+          position: absolute;
+          right: -10px;
+          top: 0;
+        }
+      }
+    }
+  }
+}
